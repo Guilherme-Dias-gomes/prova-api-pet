@@ -7,7 +7,7 @@ export async function inserirPet(pet) {
         values (?)
 
         `
-    const resposta = await con.query(comando, [pet.nome])
+    const [resposta] = await con.query(comando, [pet.nome])
     return resposta[0];
 }
 
@@ -20,6 +20,6 @@ export async function listarPets() {
     from tb_pet;
 
     `
-    const resposta = await con.query (comando)
+    const [resposta] = await con.query (comando)
     return resposta;
 }
