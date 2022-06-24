@@ -15,6 +15,8 @@ server.post('/pet', async (req, resp) => {
 
 })
 
+// buscar por todos
+
 server.get('/pet', async (req,resp) => {
 
     try {
